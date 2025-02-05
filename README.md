@@ -1,1 +1,3 @@
 # Manga-webapp
+
+HTML CSS JS FLASK SQLITE
