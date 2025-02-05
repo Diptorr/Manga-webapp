@@ -1,0 +1,26 @@
+-- Create the Users table
+CREATE TABLE IF NOT EXISTS Users (
+    user_id INTEGER PRIMARY KEY AUTOINCREMENT,
+    surname TEXT NOT NULL,
+    last_name TEXT NOT NULL,
+    email TEXT UNIQUE NOT NULL,
+    phone TEXT,
+    nick TEXT
+);
+
+-- Create the Novels table
+CREATE TABLE IF NOT EXISTS Novels (
+    novel_id INTEGER PRIMARY KEY AUTOINCREMENT,
+    title TEXT NOT NULL,
+    description TEXT,
+    FOREIGN KEY (user_id) REFERENCES Users(user_id)
+);
+
+-- Create the Images table
+CREATE TABLE IF NOT EXISTS Images (
+    image_id INTEGER PRIMARY KEY AUTOINCREMENT,
+    novel_id INTEGER,
+    image_data BLOB,
+    page_number int,
+    FOREIGN KEY (novel_id) REFERENCES Novels(novel_id)
+);
