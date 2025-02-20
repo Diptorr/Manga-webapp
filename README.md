@@ -1,3 +1,5 @@
 # Manga-webapp
 
-HTML CSS JS FLASK SQLITE
+HTML CSS WA Actix SQLITE
+
+WAS?
